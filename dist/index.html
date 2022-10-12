@@ -7,8 +7,17 @@
   <title>Webpack Starter Kit</title>
 </head>
 <body>
-  <img src="./images/turing-logo.png" alt="turing logo">
-  
+  <header>
+    <h1>UFO Sightings</h1>
+  </header>
+  <form>
+    <label>U see somethin'?</label><br />
+    <input type='text' placeholder="location" id='location' required/><br />
+    <input type='text' placeholder="description" id='description' required/><br />
+    <button type="'submit" id="submit">Add</button>
+  </form>
+  <div id="container">
+  </div>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
 
