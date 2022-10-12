@@ -36,17 +36,17 @@ const addNewSighting = () => {
   event.preventDefault()
 
   const newSighting = {
-    location: locationInput.value, 
+    location: locationInput.value,
     description: descriptionInput.value
   }
 
   clearInputs()
 
   fetch('http://localhost:3001/sightings', {
-    method: 'POST', 
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
-    }, 
+    },
     body: JSON.stringify(newSighting)
   })
     .then(response => response.json())
@@ -56,7 +56,7 @@ const addNewSighting = () => {
 const removeSighting = (id) => {
   event.preventDefault()
   fetch(`http://localhost:3001/sightings/${id}`, {
-    method: 'DELETE', 
+    method: 'DELETE',
   })
     .then(response => response.json())
     .then(data => generateUfoCards(data))
